@@ -12,8 +12,8 @@ router.post('/', upload.single("fileUpload") ,(req, res) => {
         error: err.message
       });
     } else {
-      const url = imgRes.url.split("/")[imgRes.url.split("/").length-2];
-      const newUrl = imgRes.url.replace(url, "fl_attachment");
+      const url = imgRes.secure_url.split("/")[imgRes.secure_url.split("/").length-2];
+      const newUrl = imgRes.secure_url.replace(url, "fl_attachment");
       const file = new File({
         _id: new mongoose.Types.ObjectId(),
         fileId : imgRes.public_id,
