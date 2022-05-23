@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share File</title>
+  <link rel="stylesheet" href="./../static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Upload Your File</header>
+    <div class="drag-area">
+      <form action="" class="upload-form">
+        <input class="file-input" type="file" name="fileUpload" hidden>
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Drag and Drop File </p>
+        <p><span>Select File</span></p>
+      </form>
+    </div>
+    <section class="progress-area"></section>
+    <section class="uploaded-area"></section>
+    <div class="sharing-container">
+      <p class="expire">Link expires in 30 Minutes</p>
+
+
+      <div class="input-container">
+          <input type="text" id="fileURL" readonly>
+          <img src="./../static/copy-icon.svg" id="copyURLBtn" alt="copy to clipboard icon">
+      </div>
+
+
+      <p class="email-info">Or Send via Email</p>
+      <div class="email-container">
+          <form id="emailForm">
+              <div class="filed">
+                  <label for="fromEmail">Your Email</label>
+                  <input type="email" autocomplete="email" required name="emailFrom" id="fromEmail">
+              </div>
+              <input type="text" name="fileId" class="fileId" hidden>
+              <div class="filed">
+                  <label for="toEmail">Receiver's Email</label>
+                  <input type="email" required autocomplete="receiver" name="emailTo" id="toEmail">
+              </div>
+              <div class="send-btn-container">
+                  <button id="sendMailBtn">Send</button>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  </div>
+  <div class="toast"></div>
+
+  <script src="./../static/script.js"></script>
+
+</body>
+</html>

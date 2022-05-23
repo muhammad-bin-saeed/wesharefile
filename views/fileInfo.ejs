@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share File</title>
+  <link rel="stylesheet" href="./../static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Download Your File</header>
+      <div class="download-area" style="height:300px ;">
+        <i class="fas fa-cloud-download-alt"></i>
+        <p>Your File Is Ready to Download</p>
+        <p class="expire" style="color:black;">Link expires in 30 Minutes</p>
+        <p><%= file.fileName  %> <br> <%= file.fileSize %>  </p>
+        <p class="download-button"><span><a href="<%= file.filePath %>">Download File</a></span></p>
+      </div>
+  </div>
+  <div class="toast"></div>
+
+  <script src="./../static/download.js"></script>
+
+</body>
+</html>
