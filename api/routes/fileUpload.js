@@ -24,7 +24,7 @@ router.post('/', upload.single("fileUpload") ,(req, res) => {
       file.save().then(file => {
         res.status(201).json({  
           message: 'File added successfully',
-          url: `${process.env.APP_URI || "localhost:3000"}/files/${file._id}`,
+          url: `${process.env.APP_URI}/files/${file._id}`,
         });
       }).catch(error => {
         res.status(500).json({
