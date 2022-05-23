@@ -1,6 +1,4 @@
 const emailTemp = require('./emailTemp');
-const dotenv = require('dotenv');
-dotenv.config();
 
 const sendMail = (file) => {
     const nodemailer = require('nodemailer');

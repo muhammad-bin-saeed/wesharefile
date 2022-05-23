@@ -1,11 +1,9 @@
 const express = require('express');
-const morgan = require('morgan');
 const dbConnect = require('./config/mongodb');
 const UploadRouter = require('./api/routes/fileUpload');
 const InfoRouter = require('./api/routes/fileInfo');
 
 const app = express();
-app.use(morgan('dev'));
 app.use("/static", express.static("static"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
